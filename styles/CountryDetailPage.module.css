@@ -1,0 +1,188 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.countryCard {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 32px;
+}
+
+.countryHeader {
+  margin-bottom: 24px;
+}
+
+.flagSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.emoji {
+  font-size: 64px;
+}
+
+.flagSection h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.code {
+  color: #4f46e5;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.countryDetails {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.detailItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.detailItem strong {
+  color: #374151;
+}
+
+.detailItem span {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.languagesSection,
+.statesSection {
+  margin-bottom: 32px;
+}
+
+.languagesSection h3,
+.statesSection h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.languagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.languageCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #4f46e5;
+  transition: transform 0.2s ease;
+}
+
+.languageCard:hover {
+  transform: translateY(-2px);
+}
+
+.languageCard h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.languageCode {
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.languageActions {
+  padding-top: 12px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.statesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.stateCard {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stateCard h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.stateCode {
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.moreStates {
+  text-align: center;
+  margin-top: 16px;
+  color: #6b7280;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.loading,
+.error,
+.modeMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.loading p,
+.error p,
+.modeMessage p {
+  margin-top: 16px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.error h2,
+.modeMessage h2 {
+  color: #1f2937;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
