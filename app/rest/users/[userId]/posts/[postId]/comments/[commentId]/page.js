@@ -41,8 +41,8 @@ export default function CommentDetailPage() {
         throw new Error("Failed to fetch comment data");
       }
 
-      const commentData = await commentResponse.json();
       const postData = await postResponse.json();
+      const commentData = await commentResponse.json();
       const userData = await userResponse.json();
 
       setComment(commentData);
