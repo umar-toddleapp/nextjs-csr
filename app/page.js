@@ -26,17 +26,19 @@ export default function HomePage() {
         <h3 className={styles.sectionTitle}>Explore the App</h3>
 
         <div className={styles.cardGrid}>
-          <div className={styles.card}>
-            <h4>REST API Routes</h4>
-            <p>Explore nested routing with JSONPlaceholder API</p>
-            <div className={styles.buttonGroup}>
-              <Link href="/rest" className="btn btn-primary">
-                View REST Routes
-              </Link>
+          {(currentMode === "current" || !currentMode) && (
+            <div className={styles.card}>
+              <h4>REST API Routes</h4>
+              <p>Explore nested routing with JSONPlaceholder API</p>
+              <div className={styles.buttonGroup}>
+                <Link href="/rest" className="btn btn-primary">
+                  View REST Routes
+                </Link>
+              </div>
             </div>
-          </div>
+          )}
 
-          {currentMode && (
+          {(currentMode === "preview" || currentMode === "draft") && (
             <div className={styles.card}>
               <h4>GraphQL API Routes</h4>
               <p>Explore countries data with GraphQL API</p>
@@ -51,32 +53,22 @@ export default function HomePage() {
 
         <div className={styles.infoSection}>
           <h4>Mode-Based API Switching</h4>
-          {!currentMode ? (
-            <ul className={styles.featureList}>
-              <li>
-                <strong>No Mode Selected:</strong> Only REST API is available
-                (JSONPlaceholder)
-              </li>
-              <li>
-                <strong>To unlock GraphQL mode:</strong> Switch mode via
-                postMessage or parent window
-              </li>
-            </ul>
-          ) : (
-            <ul className={styles.featureList}>
-              <li>
-                <strong>Default Mode:</strong> Uses REST API (JSONPlaceholder)
-              </li>
-              <li>
-                <strong>Preview/Draft Mode:</strong> Uses GraphQL API
-                (Countries)
-              </li>
-              <li>
-                <strong>Draft Mode:</strong> Disables UI interactions while
-                keeping scrolling
-              </li>
-            </ul>
-          )}
+          <ul className={styles.featureList}>
+            <li>
+              <strong>Current Mode (or No Mode):</strong> Shows REST API only
+              (JSONPlaceholder)
+            </li>
+            <li>
+              <strong>Preview Mode:</strong> Shows GraphQL API only (Countries)
+            </li>
+            <li>
+              <strong>Draft Mode:</strong> Shows GraphQL API only (Countries)
+              with disabled UI interactions
+            </li>
+            <li>
+              <strong>Current Mode:</strong> {currentMode || "Default/Current"}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
